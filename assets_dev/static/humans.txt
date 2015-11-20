@@ -1,0 +1,11 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Russlan Akiev @russlan
+
+
+# TECHNOLOGY COLOPHON
+
+    HAPI, NodeJs

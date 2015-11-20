@@ -1,0 +1,47 @@
+{% extends './layouts/default.html' %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="starter-template">
+    <h1>DeviceLab bookmark</h1>
+
+    <p>{$ urlRedirect $}</p>
+
+    <p><a href="{$ urlRedirect $}" class="btn btn-default">Redirect</a>
+    <a href="javascript:setAndRedirect('{$ urlRedirect $}')" class="btn btn-default">Set cookie and redirect</a></p>
+
+    <p>This is your DeviceLab redirect page. It only appears if you haven't set a cookie for this page yet, and if you are not forcing it to display by adding '?wait' to the URL.</p>
+
+    <p>In order for your devices to directly follow the bookmark, visiti this page and click the 'Set cookie and redirect' button. At any future time, they will directly be redirected to your Ghostlab server.</p>
+
+    <p>If you do not want to set the cookie, click the 'Just redirect' button.</p>
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script type="text/javascript">
+
+function setAndRedirect(url) {
+
+  localStorage.setItem('redirect', 'true');
+  window.location.href = '{$ urlRedirect $}';
+}
+
+if (window.location.search.indexOf('wait') > -1) {
+
+  localStorage.removeItem('redirect')
+}
+else if (localStorage.getItem('redirect') === 'true') {
+
+  window.location.href = '{$ urlRedirect $}';
+}
+
+</script>
+
+{% endblock %}
