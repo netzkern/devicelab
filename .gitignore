@@ -18,3 +18,4 @@ npm-shrinkwrap.json
 /lib/assets-dev/static/bower_components/
 /lib/assets-dev/static/css/*.css
 /lib/assets-dev/static/css/*.map
+config.json
