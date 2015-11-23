@@ -1,8 +1,11 @@
 {
+  "port": 80,
+  "host": "0.0.0.0",
+
   "browserSync": {
-    "processPath": "C:\\Users\\nk.ruak361\\AppData\\Roaming\\npm\\browser-sync.cmd",
-    "processPath2": "/usr/local/bin/browser-sync",
+    "processPath": "/usr/local/bin/browser-sync",
     "port": 3001,
-    "uiPort": 3002
+    "uiPort": 3002,
+    "processPath_WIN": "%userprofile%\\AppData\\Roaming\\npm\\browser-sync.cmd",
   }
 }

@@ -46,8 +46,8 @@ var internals = {
 var server = new Hapi.Server();
 
 server.connection({
-  host: process.env.HOST || '0.0.0.0',
-  port: process.env.PORT || 3000,
+  host: process.env.HOST || Config.host || '0.0.0.0',
+  port: process.env.PORT || Config.port || 3000,
   routes: {
     cors: {
       origin: Config.corsOrigins
