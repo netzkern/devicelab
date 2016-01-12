@@ -1,0 +1,15 @@
+{
+  "apps": [{
+    "name": "DeviceLab",
+    "script": "index.js",
+    "args": [],
+    "watch": false,
+    "node_args": "",
+    "merge_logs": false,
+    "max_memory_restart": "2G",
+    "cwd": "/var/devicelab",
+    "env": {
+      "NODE_ENV": "development"
+    }
+  }]
+}
